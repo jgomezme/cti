@@ -18,4 +18,7 @@ angular.module('cti')
  	 
  	$urlRouterProvider.otherwise("/jobs");
 })
+.run(function($rootScope){
+	 $rootScope.nothing = "Not Defined"
+})
 ;

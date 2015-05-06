@@ -1,4 +1,4 @@
-   
+
 <article class="row-fluid" ng-init="load()">
   <div class="row-fluid">
 
@@ -11,9 +11,9 @@
 </div>
 
   <div class="row">   
-     <div class="col-lg-2"><ng-md-icon icon="room"></ng-md-icon>{{values.Location}}</div>
-     <div class="col-lg-2"><ng-md-icon icon="loyalty"></ng-md-icon>{{values.JobType}}</div>
-     <div class="col-lg-2"><ng-md-icon icon="attach_money"></ng-md-icon>{{values.Rate}}</div>
+     <div class="col-lg-2"><ng-md-icon icon="room"></ng-md-icon>{{values.Location || $root.nothing}}</div>
+     <div class="col-lg-2"><ng-md-icon icon="edit"></ng-md-icon>{{values.JobType || $root.nothing}}</div>
+     <div class="col-lg-2"><ng-md-icon icon="attach_money"></ng-md-icon>{{values.Rate || $root.nothing}}</div>
     </div>
 <br>
 <br>
@@ -22,7 +22,7 @@
 <div class="row-fluid clearfix">
 
 <p class="col-lg-12 text-justify color-gray">
-   {{values.Description}}
+   {{values.Description || $root.undefined}}
 </p>
 
 </div>
@@ -44,7 +44,7 @@
 <br>
 <br>
 
-<form ng-model="apply" class="row-fluid cti-form">
+<form ng-model="apply" class="row-fluid cti-form" ng-submit="">
   
    <fieldset class="form-group">
    

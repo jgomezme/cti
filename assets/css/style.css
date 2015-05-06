@@ -73,3 +73,8 @@ ng-md-icon{
   border-bottom: none;
   border-radius: none;
 }
+
+
+.list-cti-jobs .list-group-item:hover, .list-cti-jobs .list-group-item:active{
+	background: rgba(235, 235, 235, 0.17);
+}

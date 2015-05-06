@@ -1,0 +1,75 @@
+/*font*/
+
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+.monserrat{
+	font-family: 'Montserrat', sans-serif;
+}
+
+/*// colors*/
+
+.color-gray{
+	  color:gray;
+}
+
+
+/*//btn*/
+
+
+.btn-cti{
+	border-color:#2992E5; 
+	color:#2992E5;
+}
+
+.btn-padded{
+	 padding: 20px 0;
+}
+
+
+/*// forms*/
+
+.cti-form label{
+	font-weight: normal;
+	color:gray;
+	font-size: 14px !important;
+}
+
+.cti-form label span{
+	  color:red;
+}
+
+.cti-form input{
+	 padding: 20px 10px;
+}
+
+
+/*// others*/
+
+
+ng-md-icon{
+	  top: 3px;
+  position: relative;
+}
+
+
+
+/*overrrides*/
+
+.list-cti-jobs .list-group-item{
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+  margin-bottom: -1px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-left: none;
+  border-right: none;
+  padding: 30px 10px;
+}
+
+
+.list-cti-jobs .list-group-item:first-child, .list-cti-job .list-group-items:last-child {
+  border-top: none;
+  border-bottom: none;
+  border-radius: none;
+}

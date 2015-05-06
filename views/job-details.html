@@ -1,0 +1,123 @@
+<article class="row-fluid" ng-init="load()">
+  <div class="row-fluid">
+
+ <h1 class="monserrat" >{{values.JobTitle}}</h1>
+
+ </div>
+
+<div class="hidden-lg">
+<br>
+</div>
+
+  <div class="row">   
+     <div class="col-lg-2"><ng-md-icon icon="room"></ng-md-icon>{{values.Location}}</div>
+     <div class="col-lg-2"><ng-md-icon icon="loyalty"></ng-md-icon>{{values.JobType}}</div>
+     <div class="col-lg-2"><ng-md-icon icon="attach_money"></ng-md-icon>{{values.Rate}}</div>
+    </div>
+<br>
+<br>
+<br>
+
+<div class="row-fluid clearfix">
+
+<p class="col-lg-12 text-justify color-gray">
+   {{values.Description}}
+</p>
+
+</div>
+
+</article>
+<br>
+<br>
+
+
+<div class="page-row full-img" style="background-color:#dfdfdf;">
+<div class="container">
+<div class="row">
+<div class="col-12 lol-page-item"><div class="lol-item-heading-wide">
+<h2 class="text-center monserrat" style="font-size:16px; line-height: 20px; padding: 0 0 10px 0">APPLY NOW</h2>
+</div></div></div>
+</div>
+</div>
+
+<br>
+<br>
+
+<form ng-model="apply" class="row-fluid cti-form">
+  
+   <fieldset class="form-group">
+   
+    <div class="row-fluid">
+    <label>FIRST NAME <span>*</span></label>    	
+    </div>
+    <br>
+    <div class="row-fluid">
+    <input ng-model="apply.first_name" class="form-control" required>
+    </div>
+
+    <br>
+    <br>
+
+
+    <div class="row-fluid">
+    <label>LAST NAME <span>*</span></label>    	
+    </div>
+    <br>
+    <div class="row-fluid">
+    <input ng-model="apply.last_name" class="form-control" required>
+    </div>
+
+    <br>
+    <br>
+
+
+    <div class="row-fluid">
+    <label>EMAIL <span>*</span></label>    	
+    </div>
+    <br>
+    <div class="row-fluid">
+    <input ng-model="apply.email" type="email" class="form-control" required>
+    </div>
+
+    <br>
+    <br>
+
+    <div class="row-fluid">
+    <label>PHONE <span>*</span></label>    	
+    </div>
+    <br>
+    <div class="row-fluid">
+    <input ng-model="apply.phone" class="form-control col-lg-6" required>
+    </div>
+    
+    <br>
+    <br>
+    <br>
+    <br>
+   
+
+    <div class="row-fluid">
+    <label>UPLOAD RESUME <span>*</span></label>    	
+    </div>
+    <br>
+    <div class="row-fluid">
+    <input ng-model="apply.resume" type="file" required>
+    </div>
+
+   </fieldset>
+    <br>
+    <br>
+
+   <div class="row-fluid">
+      <button ng-disabled="apply.$invalid" class="btn btn-default btn-block btn-lg btn-cti btn-padded">SUBMIT RESUME</button>
+   </div>
+
+    </form>	   	    
+</form>
+<br>
+<br>
+  <div class="row-fluid">
+  <p class="text-center">
+      <a class="btn btn-default" ui-sref="jobs">JOB LISTING</a>
+      </p>
+   </div

@@ -18,3 +18,4 @@ angular.module('cti')
  	 
  	$urlRouterProvider.otherwise("/jobs");
 })
+;

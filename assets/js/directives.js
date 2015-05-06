@@ -9,9 +9,11 @@
 
 
       $rootScope.$on('$locationChangeStart', function(event, currentRoute, previousRoute) {        
-        if (previousRoute) return;
-        
+        window.scrollTo(0,0);       //scroll view to top 
+        if (previousRoute) return;        
         element.removeClass('ng-hide');
+
+
 
         $timeout(function() {
           element.removeClass('ng-hide');
@@ -19,6 +21,7 @@
       });
 
       $rootScope.$on('$locationChangeSuccess', function() {
+        window.scrollTo(0,0);        //scroll view to top
         element.addClass('ng-hide');
       });
     }

@@ -9,12 +9,13 @@ function mainCtrl($scope){
 }
 
 
-function jobCtrl($scope,$api,$log, $stateParams){
+function jobCtrl($scope,$rootScope,$api,$log, $stateParams){
 	
 
 	  $scope.load = function(id){
 
 	  	   var id = $stateParams.id || id;
+
 
 	  		$api
 	  		.job(id || null)
@@ -24,6 +25,11 @@ function jobCtrl($scope,$api,$log, $stateParams){
 
 	  		     if(indev())	  	  		  			 
 	  			 console.log(rs);
+
+
+
+	  			if(rs.JobTitle)
+	  				$rootScope.JobTitle = rs.JobTitle;
 	  		})
 	  		.error(function(err){	  			
 	  			
@@ -38,11 +44,13 @@ function jobCtrl($scope,$api,$log, $stateParams){
 
 
 	  $scope.apply_job = function(){
-	  	
+
+
+	  	  $scope.apply.jobTitle = $rootScope.JobTitle;
 
 	  	  $api
 	  	  .apply()
-	  	  .post($scope.form)
+	  	  .post($scope.apply)
 	  	  .success(function(rs){
 	  		  if(indev())	  	  		  	  	  
 	  	  	  console.log(rs);

@@ -15,7 +15,7 @@ function apiFactory($http){
 		  
 		  //methods
 		  this.get = function(){ var url = this.url; this.reset(); return $http.get(url); }
-		  this.post = function(data, header){ var url = this.url; this.reset(); return $http.post(data || {}, header || {}); } 
+		  this.post = function(data, header){ var url = this.url; this.reset(); return $http.post(url, data || {}, header || {}); } 
 
 		  return this;
 }

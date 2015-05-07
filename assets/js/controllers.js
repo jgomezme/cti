@@ -38,6 +38,7 @@ function jobCtrl($scope,$api,$log, $stateParams){
 
 
 	  $scope.apply_job = function(){
+	  	
 
 	  	  $api
 	  	  .apply()
@@ -45,6 +46,8 @@ function jobCtrl($scope,$api,$log, $stateParams){
 	  	  .success(function(rs){
 	  		  if(indev())	  	  		  	  	  
 	  	  	  console.log(rs);
+
+	  	  	 $scope.sent = true;
 	  	  })
 	  	  .error(function(err){
 	  		  if(indev())	  	  	

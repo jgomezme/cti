@@ -25,5 +25,8 @@ var config = {
 }
 
 //init confing global var
-
+window.env = config.env;
 window.config = config[config.env];
+window.indev = function(){		
+	  return /dev/g.test(window.env);
+}

@@ -1,5 +1,7 @@
 // controller
 
+
+
 function mainCtrl($scope){
 
 	$scope.moment = moment;
@@ -8,6 +10,7 @@ function mainCtrl($scope){
 
 
 function jobCtrl($scope,$api,$log, $stateParams){
+	
 
 	  $scope.load = function(id){
 
@@ -18,13 +21,35 @@ function jobCtrl($scope,$api,$log, $stateParams){
 	  		.get()
 	  		.success(function(rs){
 	  			 $scope.values = rs;
+
+	  		     if(indev())	  	  		  			 
 	  			 console.log(rs);
 	  		})
 	  		.error(function(err){	  			
-	  			$log.warn(err);
+	  			
+	  			if(indev())
+	  			$log.error(err);
+
 	  			$scope.values = [];
 	  		})
 	  		;
+
+	  }
+
+
+	  $scope.apply_job = function(){
+
+	  	  $api
+	  	  .apply()
+	  	  .post($scope.form)
+	  	  .success(function(rs){
+	  		  if(indev())	  	  		  	  	  
+	  	  	  console.log(rs);
+	  	  })
+	  	  .error(function(err){
+	  		  if(indev())	  	  	
+	  	  	  $log.error(err);
+	  	  })
 
 	  }
 
